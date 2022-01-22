@@ -142,7 +142,9 @@ db.once('open', async () => {
     ]
   });
 
-  await User.create({
+ 
+
+ await User.create({
     firstName: 'Andrew',
     lastName: 'Tram',
     email: 'andrew@testmail.com',

@@ -15,5 +15,10 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "emailjs-com": "^3.2.0",
+    "react-hook-form": "^7.25.0",
+    "react-toastify": "^8.1.0"
   }
 }

@@ -1,19 +1,16 @@
 const mongoose = require('mongoose');
-
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 const Order = require('./Order');
 
 const userSchema = new Schema({
-  firstName: {
+  name: {
     type: String,
     required: true,
     trim: true
   },
-  lastName: {
+  userId: {
     type: String,
-    required: true,
-    trim: true
   },
   email: {
     type: String,
@@ -23,8 +20,12 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true,
-    minlength: 5
+    minlength: 6,
   },
+  role: {
+    type: String,
+    default: "user",
+  }, 
   orders: [Order.schema]
 });
 
@@ -43,6 +44,7 @@ userSchema.methods.isCorrectPassword = async function(password) {
   return await bcrypt.compare(password, this.password);
 };
 
-const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+module.exports = mongoose.model('User', userSchema);
+
+

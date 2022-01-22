@@ -13,7 +13,7 @@ const ContactForm = () => {
 
   const toastifySuccess = () => {
     toast("Form sent!", {
-      position: "bottom-right",
+      position: "bottom-left",
       autoClose: 5000,
       hideProgressBar: true,
       closeOnClick: true,

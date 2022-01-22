@@ -12,25 +12,33 @@ const productSchema = new Schema({
     type: String
   },
   image: {
-    type: String
+    type: String,
+    required: true
   },
   price: {
     type: Number,
     required: true,
     min: 0.99
   },
-  quantity: {
+  qtyInStock: {
     type: Number,
-    min: 0,
+    required: true,
     default: 0
+  },
+  isSold: {
+    type: Boolean,
+    default: false
   },
   category: {
     type: Schema.Types.ObjectId,
     ref: 'Category',
     required: true
-  }
-});
+  },
+},
 
-const Product = mongoose.model('Product', productSchema);
+  {timestamps: true}
+);
 
-module.exports = Product;
+
+module.exports = mongoose.model('Product', productSchema);
+

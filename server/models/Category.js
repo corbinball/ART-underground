@@ -6,10 +6,12 @@ const categorySchema = new Schema({
   name: {
     type: String,
     required: true,
-    trim: true
-  }
-});
+    trim: true,
+  },
+},
+{ timestamps: true }
+);
 
-const Category = mongoose.model('Category', categorySchema);
 
-module.exports = Category;
+module.exports = mongoose.model('Category', categorySchema);
+

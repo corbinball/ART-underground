@@ -1,4 +1,7 @@
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
 const ContactForm = () => {
   const {
@@ -8,8 +11,40 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm();
 
+  const toastifySuccess = () => {
+    toast("Form sent!", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      className: "submit-feedback success",
+      toastId: "notifyToast",
+    });
+  };
+
   const onSubmit = async (data) => {
     const { name, email, subject, message } = data;
+
+    try {
+      const templateParams = {
+        name,
+        email,
+        subject,
+        message,
+      };
+      await emailjs.send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        templateParams,
+        process.env.REACT_APP_USER_ID
+      );
+      reset();
+      toastifySuccess();
+    } catch (e) {
+      console.log(e);
+    }
 
     console.log("Name: ", name);
     console.log("Email: ", email);
@@ -30,6 +65,11 @@ const ContactForm = () => {
               >
                 {/* Row 1 of form */}
                 <div className="row formRow">
+                  <h3>Are you a local Dallas artist looking for exposure?</h3>
+                  <h4>
+                    We are always looking for new local artists to feature!{" "}
+                    <br></br>Contact us!
+                  </h4>
                   <div className="col-6">
                     <input
                       type="text"

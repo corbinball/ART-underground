@@ -142,10 +142,33 @@ db.once('open', async () => {
     ]
   });
 
+ 
+
+ await User.create({
+    firstName: 'Andrew',
+    lastName: 'Tram',
+    email: 'andrew@testmail.com',
+    password: 'password12345'
+  });
+
   await User.create({
-    firstName: 'Elijah',
-    lastName: 'Holt',
-    email: 'eholt@testmail.com',
+    firstName: 'Val',
+    lastName: 'Brisendine',
+    email: 'val@testmail.com',
+    password: 'password12345'
+  });
+
+  await User.create({
+    firstName: 'Aubrey',
+    lastName: 'Ross',
+    email: 'aubrey@testmail.com',
+    password: 'password12345'
+  });
+
+  await User.create({
+    firstName: 'Corbin',
+    lastName: 'Ball',
+    email: 'corbin@testmail.com',
     password: 'password12345'
   });
 

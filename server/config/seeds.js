@@ -19,99 +19,99 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: '',
+      name: 'Marble Blue',
       description:
-        '',
-      image: '',
+        'Ink and a epoxy glaze - deep blues and greens. An Original by Aubrey Ross.',
+      image: 'VA_MarbleBlue.JPG',
       category: categories[0]._id, //PAINTING VA
-      price: 2.99,
-      quantity: 500
+      price: 159.99,
+      quantity: 1
     },
     {
-      name: '',
+      name: 'Plumes in Ink',
       description:
-        '',
-      image: '',
+        'Ink and a epoxy glaze - deep blues and golds whisper ocean vibes. An Original by Aubrey Ross.',
+      image: 'VA_InkPlumes.JPG',
       category: categories[0]._id, //PAINTING VA
-      price: 2.99,
-      quantity: 500
+      price: 129.99,
+      quantity: 1
     },
     {
-      name: '',
+      name: 'KamisakaSekka',
       description:
-        '',
-      image: '',
+        'A print of Snow from Momoyogusa Flowers of a Hundred Generations (ca. 1909 to 1910) by Kamisaka Sekka.',
+      image: 'PR_KamisakaSekka.JPG',
       category: categories[1]._id, //PRINT PR
-      price: 2.99,
+      price: 22.99,
       quantity: 500
     },
     {
-      name: '',
+      name: 'Ara',
       description:
-        '',
-      image: '',
+        'Ara (c.1926) print in high resolution by Samuel Jessurun de Mesquita. Original from The Rijksmuseum.',
+      image: 'PR_Ara.JPG',
       category: categories[1]._id, //PRINT PR
-      price: 2.99,
+      price: 32.99,
       quantity: 500
     },
     {
-      name: '',
+      name: 'Cool Guy',
       description:
-        '',
-      image: '',
+        'Colors, colors, colors. Color pencil can really bring a drawing to life. An Original by Aubrey Ross.',
+      image: 'DA_CoolGuy.JPG',
       category: categories[2]._id, //DRAWING DA
-      price: 2.99,
-      quantity: 500
+      price: 32.99,
+      quantity: 1
     },
     {
-      name: '',
+      name: 'Half Face',
       description:
-        '',
-      image: '',
+        'The process of a portrait starts with the eyes. An Original by Aubrey Ross.',
+      image: 'DA_HalfFace.JPG',
       category: categories[2]._id, //DRAWING DA
-      price: 2.99,
-      quantity: 500
+      price: 52.99,
+      quantity: 1
     },
     {
-      name: '',
+      name: 'Baduism',
       description:
-        '',
-      image: '',
+        'Erykah Badu made with spray paint and oils. An original by Valerie Brisendine.',
+      image: 'MM_Baduism.JPG',
       category: categories[3]._id, //MIXED MEDIA MM
-      price: 2.99,
-      quantity: 500
+      price: 82.99,
+      quantity: 1
     },
     {
-      name: '',
+      name: 'Tribe',
       description:
-        '',
-      image: '',
+        'A mixed media artwork to emphasize the layers of culture. An original by Valerie Brisendine.',
+      image: 'MM_Tribe.JPG',
       category: categories[3]._id, //MIXED MEDIA MM
-      price: 2.99,
-      quantity: 500
+      price: 119.99,
+      quantity: 1
     },
     {
       name: 'Son of Media',
       description:
-        'Social Media surrounds us completely',
+        'Social Media surrounds us completely. An original digital piece by Valerie Brisendine.',
       image: 'DG_SonOfMedia.JPG',
       category: categories[4]._id, //DIGITAL ART DG
-      price: 2.99,
+      price: 30.00,
       quantity: 500
     },
     {
       name: 'Space Dairy',
       description:
-        'Ever wonder how the cow jumped over the moon',
+        'Ever wonder how the cow jumped over the moon? An original digital piece by Valerie Brisendine.',
       image: 'DG_SpaceDairy.JPG',
       category: categories[4]._id, //DIGITAL ART DG
-      price: 2.99,
+      price: 20.00,
       quantity: 500
     },
     {
       name: 'Engenius',
       description:
-        'A black and white photo of the inside of a roadster engine',
+        'A black and white photo of the inside of an engine. An original potograph by Valerie Brisendine.',
       image: 'PG_Engenius.JPG',
       category: categories[5]._id, //PHOTO PG
       price: 125.00,
@@ -120,7 +120,7 @@ db.once('open', async () => {
     {
       name: 'Glass',
       description:
-        'Glass blowing in low light',
+        'Glass blowing in low light. An original potograph by Valerie Brisendine.',
       image: 'PG_Glass.JPG',
       category: categories[5]._id, //PHOTO PG
       price: 82.99,

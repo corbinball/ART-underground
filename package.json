@@ -17,6 +17,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+    "and": "0.0.3",
     "emailjs-com": "^3.2.0",
     "react-hook-form": "^7.25.0",
     "react-toastify": "^8.1.0"

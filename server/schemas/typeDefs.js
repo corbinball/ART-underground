@@ -29,7 +29,7 @@ const typeDefs = gql`
     userId: String
     email: String
     orders: [Order]
-    role: string
+    role: String
   }
 
   type Checkout {

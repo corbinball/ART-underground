@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
+import ProductItem from "../ProductItem";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 import "slick-carousel/slick/slick.css";
@@ -92,6 +93,7 @@ export default function ImageCarousel() {
 
   return (
     <div className="content">
+      <h2>Drawings</h2>
       <div className="controls">
         <button onClick={sliderRef?.slickPrev}>
           <FaArrowLeft />

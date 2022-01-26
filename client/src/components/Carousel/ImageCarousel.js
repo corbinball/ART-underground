@@ -101,15 +101,15 @@ export default function ImageCarousel() {
         </button>
       </div>
       <Slider ref={setSliderRef} {...sliderSettings}>
-        {images.map((card, index) => (
+        {images.map((image, index) => (
           <div key={index} className="card">
-            <img src={card.imageSrc} alt={card.title} className="card-image" />
+            <img src={image.imageSrc} alt={image.title} className="art-image" />
             <div className="text-info">
-              <div className="card-header">
-                <h2>{card.title}</h2>
-                <span>{card.pricingText}</span>
+              <div className="art-header">
+                <h2>{image.title}</h2>
+                <span>{image.pricingText}</span>
               </div>
-              <p>{card.description}</p>
+              <p>{image.description}</p>
             </div>
             <button>Buy Now</button>
           </div>

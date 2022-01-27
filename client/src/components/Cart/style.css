@@ -10,6 +10,7 @@
   padding: .5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
   border-bottom-left-radius: .5rem;
+ 
 }
 
 .cart h2 {
@@ -32,20 +33,22 @@
 }
 
 .cart-closed {
+  /* background-image: "./images/LightMode_Mouse.png"; */
   position: fixed;
   top: 2%;
-  right: 1%;
-  font-size: 2rem;
+  right: 2%;
+  /* font-size: 2rem; */
   cursor: pointer;
-  background-color: var(--secondary);
-  border-radius: 50%;
-  padding: .25rem;
+  /* background-color: var(--secondary); */
+  /* border-radius: 50%; */
+  /* padding: .25rem;
   width: 50px;
-  height: 50px;
+  height: 50px; */
 }
 
 .cart-closed:hover {
   transform: rotate(8deg);
+  transform: scale(1.25);
 }
 
 .cart img {

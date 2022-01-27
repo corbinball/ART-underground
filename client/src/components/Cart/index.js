@@ -63,8 +63,9 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
-        <span role="img" aria-label="trash">
-          🛒
+        <span role="img" aria-label="mouse">
+          <p>CART</p>
+          <img src="./images/LightMode_Mouse.png" alt="mouse" width="43px"></img>
         </span>
       </div>
     );

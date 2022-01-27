@@ -11,17 +11,15 @@
 
 * {
   box-sizing: border-box;
-  
 }
 
 html,
 body {
   min-height: 100%;
- 
 }
 
 body {
-  margin-top:3%;
+  margin-top: 3%;
   /* margin: 0; */
   padding: 0;
   font-family: sans-serif;
@@ -32,7 +30,6 @@ body {
   font-family: sans-serif;
   background: linear-gradient(#ffffff, #979696);
   background-image: cover;
-  
 }
 em {
   color: var(--secondary);
@@ -63,19 +60,18 @@ h1 {
 }
 
 h2 {
-  font-size: .7rem;
+  font-size: 0.7rem;
   padding-top: 1em;
- 
 }
 
 h3 {
   font-size: 1.75rem;
-  color: (--dark)
+  color: (--dark);
 }
 
 h4 {
   font-size: 1.5rem;
-  color: (--dark)
+  color: (--dark);
 }
 
 h5 {
@@ -87,11 +83,10 @@ h6 {
 }
 
 p {
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin-top: 0;
   text-transform: uppercase;
   letter-spacing: 4px;
-  
 }
 p:hover {
   color: white;
@@ -101,7 +96,7 @@ a {
   color: var(--tertiary);
   text-decoration: none;
   font-weight: bold;
-  z-index: 10
+  z-index: 10;
 }
 /* a {
   text-decoration: none;
@@ -116,17 +111,17 @@ a {
 } */
 /* /////////////////////////////////////////////CURTAIN ANIMATION */
 a:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
   /* width: 100vw;
   height: 100vh; */
-  background-color: rgb(0, 0, 0, .2);
+  background-color: rgb(0, 0, 0, 0.2);
   overflow: hidden;
   z-index: 2;
   transform: translateX(-100%);
-  transition: all .5s;
+  transition: all 0.5s;
   /* filter: blur(8px); */
 }
 
@@ -138,8 +133,6 @@ a:hover {
   text-decoration: none;
   color: var(--light);
 }
-
-
 
 button {
   color: var(--secondary);
@@ -173,7 +166,7 @@ button:hover {
   background: var(--primary);
   overflow: hidden;
   /* filter: blur(1px); */
-  }
+}
 
 button[disabled] {
   cursor: default;
@@ -206,7 +199,6 @@ input:focus {
   box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
 }
 
-
 .container {
   width: 85%;
   max-width: 1200px;
@@ -229,9 +221,8 @@ input:focus {
   margin-left: auto;
   margin-right: auto;
 }
-.item-deets{
-margin: 3%;
-
+.item-deets {
+  margin: 3%;
 }
 /* ///////////////////////////////////////////// NAV   */
 li {
@@ -251,8 +242,7 @@ li:hover {
   overflow: hidden;
   transition: 0.5s;
   background: var(--primary);
-  color:var(--secondary);
-  
+  color: var(--secondary);
 }
 
 .nav {
@@ -337,7 +327,7 @@ ul {
   background-color: rgba(0, 0, 0, 0);
 }
 .card-img {
-  width:55vw;
+  width: 55vw;
   height: 30vh;
   /* background-color: var(--dark); */
   background: center center no-repeat;
@@ -355,13 +345,11 @@ ul {
   opacity: 60%;
   transition-duration: 0.5s;
   justify-content: inherit;
-  filter: blur(.5px);
+  filter: blur(0.5px);
 }
 .error-text {
   color: var(--error);
 }
-
-
 
 /* ///////////////////////////////////////////////////// */
 
@@ -393,7 +381,6 @@ textarea {
   color: white; */
   border: none;
 }
-
 
 .login-box {
   position: absolute;
@@ -583,7 +570,7 @@ textarea {
     top: 80px;
     left: 20px;
   }
-  .img-container{
+  .img-container {
     display: flex;
     flex-direction: column;
   }

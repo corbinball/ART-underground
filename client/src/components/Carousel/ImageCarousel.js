@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
-import ProductItem from "../ProductItem";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -62,10 +61,10 @@ export default function ImageCarousel() {
     },
     {
       id: 2,
-      imageSrc: "./images/DA_CoolGuyMouse.JPG",
-      alt: "Cool Mouse Guy",
-      title: "Cool Mouse Guy",
-      description: "A cool looking mouse",
+      imageSrc: "./images/VA_AliceinWonderland.JPG",
+      alt: "Alice in Wonderland",
+      title: "Alice in Wonderland",
+      description: "Alice in Wonderland",
       pricingText: 120,
       artist: "Andrew Tran",
     },
@@ -87,33 +86,51 @@ export default function ImageCarousel() {
       pricingText: 120,
       artist: "Valerie Brisendine",
     },
+    {
+      id: 5,
+      imageSrc: "./images/MM_Neptune.JPG",
+      alt: "Neptune",
+      title: "Neptune",
+      description: "Neptune",
+      pricingText: 120,
+      artist: "Valerie Brisendine",
+    },
+    {
+      id: 6,
+      imageSrc: "./images/PG_Waterfall.JPG",
+      alt: "Waterfall",
+      title: "Waterfall",
+      description: "A Waterfall",
+      pricingText: 120,
+      artist: "Valerie Brisendine",
+    },
   ];
 
   console.log(images);
 
   return (
     <div className="content">
-      <h2>Drawings</h2>
+      <h2>Showcase</h2>
       <div className="controls">
-        <button onClick={sliderRef?.slickPrev}>
-          <FaArrowLeft />
+        <button className="leftControl" onClick={sliderRef?.slickPrev}>
+          <FaArrowAltCircleLeft />
         </button>
-        <button onClick={sliderRef?.slickNext}>
-          <FaArrowRight />
+        <button className="rightControl" onClick={sliderRef?.slickNext}>
+          <FaArrowAltCircleRight />
         </button>
       </div>
       <Slider ref={setSliderRef} {...sliderSettings}>
         {images.map((image, index) => (
-          <div key={index} className="card">
+          <div key={index} className="artImageHolder">
             <img src={image.imageSrc} alt={image.title} className="art-image" />
-            <div className="text-info">
-              <div className="art-header">
-                <h2>{image.title}</h2>
-                <span>{image.pricingText}</span>
-              </div>
-              <p>{image.description}</p>
-            </div>
-            <button>Buy Now</button>
+            {/* <div className="text-info"> */}
+            {/* <div className="art-header"> */}
+            {/* <h2>{image.title}</h2> */}
+            {/* <span>{image.pricingText}</span> */}
+            {/* </div> */}
+            {/* <p>{image.description}</p> */}
+            {/* </div> */}
+            {/* <button>Buy Now</button> */}
           </div>
         ))}
       </Slider>

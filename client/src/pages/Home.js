@@ -6,7 +6,7 @@ import ImageCarousel from "../components/Carousel/ImageCarousel";
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className="container, img-container">
       <CategoryMenu />
       <ProductList />
       <Cart />

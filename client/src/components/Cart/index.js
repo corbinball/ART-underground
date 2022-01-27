@@ -74,7 +74,7 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="close" onClick={toggleCart}>
-        [close]
+        [close] X
       </div>
       <h2>Shopping Cart</h2>
       {state.cart.length ? (
@@ -83,7 +83,7 @@ const Cart = () => {
             <CartItem key={item._id} item={item} />
           ))}
 
-          <div className="flex-row space-between">
+          <div className="flex-row-cart space-between">
             <strong>Total: ${calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (

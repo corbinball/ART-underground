@@ -2,17 +2,15 @@ import React from "react";
 import ProductList from "../components/ProductList";
 import CategoryMenu from "../components/CategoryMenu";
 import Cart from "../components/Cart";
-// import './index.css';
+import ImageCarousel from "../components/Carousel/ImageCarousel";
 
 const Home = () => {
   return (
-    <div className="img-container">
-      
-      <div className="container">
-        <CategoryMenu />
-        <ProductList />
-        <Cart />
-      </div>
+    <div className="container, img-container">
+      <CategoryMenu />
+      <ProductList />
+      <Cart />
+      <ImageCarousel />
     </div>
   );
 };

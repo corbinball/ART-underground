@@ -20,6 +20,9 @@
     "and": "0.0.3",
     "emailjs-com": "^3.2.0",
     "react-hook-form": "^7.25.0",
-    "react-toastify": "^8.1.0"
+    "react-icons": "^4.3.1",
+    "react-slick": "^0.28.1",
+    "react-toastify": "^8.1.0",
+    "slick-carousel": "^1.8.1"
   }
 }

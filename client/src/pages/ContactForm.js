@@ -53,7 +53,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="ContactForm">
+    <div className="container my-1">
       <div className="container">
         <div className="row">
           <div className="col-12 text-center">
@@ -113,7 +113,7 @@ const ContactForm = () => {
                   </div>
                 </div>
                 {/* Row 2 of form */}
-                <div className="row formRow">
+                <div className="flex-row space-between my-2">
                   <div className="col">
                     <input
                       type="text"

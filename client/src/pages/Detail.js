@@ -8,9 +8,9 @@ import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
   ADD_TO_CART,
-  UPDATE_PRODUCTS,
+  UPDATE_ARTWORKS,
 } from "../utils/actions";
-import { QUERY_PRODUCTS } from "../utils/queries";
+import { QUERY_ARTWORKS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 import spinner from "../assets/spinner.gif";
 
@@ -18,38 +18,38 @@ function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
 
-  const [currentProduct, setCurrentProduct] = useState({});
+  const [currentArtwork, setCurrentArtwork] = useState({});
 
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
+  const { loading, data } = useQuery(QUERY_ARTWORKS);
 
-  const { products, cart } = state;
+  const { artworks, cart } = state;
 
   useEffect(() => {
     // already in global store
-    if (products.length) {
-      setCurrentProduct(products.find((product) => product._id === id));
+    if (artworks.length) {
+      setCurrentArtwork(artworks.find((artwork) => artwork._id === id));
     }
     // retrieved from server
     else if (data) {
       dispatch({
-        type: UPDATE_PRODUCTS,
-        products: data.products,
+        type: UPDATE_ARTWORKS,
+        artworks: data.artworks,
       });
 
-      data.products.forEach((product) => {
-        idbPromise("products", "put", product);
+      data.artworks.forEach((artwork) => {
+        idbPromise("artworks", "put", artwork);
       });
     }
     // get cache from idb
     else if (!loading) {
-      idbPromise("products", "get").then((indexedProducts) => {
+      idbPromise("artworks", "get").then((indexedArtworks) => {
         dispatch({
-          type: UPDATE_PRODUCTS,
-          products: indexedProducts,
+          type: UPDATE_ARTWORKS,
+          artworks: indexedArtworks,
         });
       });
     }
-  }, [products, data, loading, dispatch, id]);
+  }, [artworks, data, loading, dispatch, id]);
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id);
@@ -66,36 +66,36 @@ function Detail() {
     } else {
       dispatch({
         type: ADD_TO_CART,
-        product: { ...currentProduct, purchaseQuantity: 1 },
+        artwork: { ...currentArtwork, purchaseQuantity: 1 },
       });
-      idbPromise("cart", "put", { ...currentProduct, purchaseQuantity: 1 });
+      idbPromise("cart", "put", { ...currentArtwork, purchaseQuantity: 1 });
     }
   };
 
   const removeFromCart = () => {
     dispatch({
       type: REMOVE_FROM_CART,
-      _id: currentProduct._id,
+      _id: currentArtwork._id,
     });
 
-    idbPromise("cart", "delete", { ...currentProduct });
+    idbPromise("cart", "delete", { ...currentArtwork });
   };
 
   return (
     <>
-      {currentProduct && cart ? (
+      {currentArtwork && cart ? (
         <div className="container my-1">
           <Link to="/">← Back to Art</Link>
 
-          <h2>{currentProduct.name}</h2>
+          <h2>{currentArtwork.name}</h2>
 
-          <p>{currentProduct.description}</p>
+          <p>{currentArtwork.description}</p>
 
           <p>
-            <strong>Price:</strong>${currentProduct.price}{" "}
+            <strong>Price:</strong>${currentArtwork.price}{" "}
             <button onClick={addToCart}>Add to Cart</button>
             <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
+              disabled={!cart.find((p) => p._id === currentArtwork._id)}
               onClick={removeFromCart}
             >
               Remove from Cart
@@ -103,8 +103,8 @@ function Detail() {
           </p>
 
           <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
+            src={`/images/${currentArtwork.image}`}
+            alt={currentArtwork.name}
           />
         </div>
       ) : null}

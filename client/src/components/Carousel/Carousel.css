@@ -125,7 +125,7 @@ body {
 }
 
 @media only screen and (max-device-width: 390px) {
-.art-image {
-  width: 26%
-}
+  .art-image {
+    width: 26%;
+  }
 }

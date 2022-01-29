@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const productSchema = new Schema({
+const artworkSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -40,5 +40,5 @@ const productSchema = new Schema({
 );
 
 
-module.exports = mongoose.model('Product', productSchema);
+module.exports = mongoose.model('Artwork', artworkSchema);
 

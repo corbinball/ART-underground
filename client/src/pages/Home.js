@@ -1,5 +1,5 @@
 import React from "react";
-import ProductList from "../components/ProductList";
+import ArtworkList from "../components/ArtworkList";
 import CategoryMenu from "../components/CategoryMenu";
 import Cart from "../components/Cart";
 import ImageCarousel from "../components/Carousel/ImageCarousel";
@@ -9,7 +9,7 @@ const Home = () => {
     <div className="container, img-container">
       <ImageCarousel />
       <CategoryMenu />
-      <ProductList />
+      <ArtworkList />
       <Cart />
     </div>
   );

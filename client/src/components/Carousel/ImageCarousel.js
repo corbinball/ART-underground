@@ -60,7 +60,7 @@ export default function ImageCarousel() {
     },
     {
       id: 2,
-      imageSrc: "./images/VA_AliceinWonderland.JPG",
+      imageSrc: "./images/DG_BaduSpider.JPG",
       alt: "Alice in Wonderland",
       title: "Alice in Wonderland",
       description: "Alice in Wonderland",

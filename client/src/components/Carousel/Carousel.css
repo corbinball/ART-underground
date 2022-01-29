@@ -88,7 +88,7 @@ body {
   height: 40px;
   border: 0;
   background-color: #14c8eb;
-  color: white;
+  color: #dadada;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.5s ease-out;

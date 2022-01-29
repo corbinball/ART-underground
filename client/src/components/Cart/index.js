@@ -65,7 +65,7 @@ const Cart = () => {
       <div className="cart-closed" onClick={toggleCart}>
         <span role="img" aria-label="mouse">
           <p>CART</p>
-          <img src="./images/LightMode_Mouse.png" alt="mouse" width="43px"></img>
+          <img src="../../images/LightMode_Mouse.png" alt="mouse" width="43px"></img>
         </span>
       </div>
     );

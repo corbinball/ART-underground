@@ -56,7 +56,6 @@ export default function ImageCarousel() {
       alt: "Cool Guy",
       title: "Cool Guy",
       description: "A cool looking guy",
-      pricingText: 120,
       artist: "Valerie Brisendine",
     },
     {
@@ -65,7 +64,6 @@ export default function ImageCarousel() {
       alt: "Alice in Wonderland",
       title: "Alice in Wonderland",
       description: "Alice in Wonderland",
-      pricingText: 120,
       artist: "Andrew Tran",
     },
     {
@@ -74,7 +72,6 @@ export default function ImageCarousel() {
       alt: "Half Face",
       title: "Half Face",
       description: "A guy with half a face",
-      pricingText: 120,
       artist: "Valerie Brisendine",
     },
     {
@@ -83,7 +80,6 @@ export default function ImageCarousel() {
       alt: "Tattoo Lady",
       title: "Tattoo Lady",
       description: "A lady with tattoos",
-      pricingText: 120,
       artist: "Valerie Brisendine",
     },
     {
@@ -92,7 +88,6 @@ export default function ImageCarousel() {
       alt: "Neptune",
       title: "Neptune",
       description: "Neptune",
-      pricingText: 120,
       artist: "Valerie Brisendine",
     },
     {
@@ -101,6 +96,22 @@ export default function ImageCarousel() {
       alt: "Waterfall",
       title: "Waterfall",
       description: "A Waterfall",
+      artist: "Valerie Brisendine",
+    },
+    {
+      id: 7,
+      imageSrc: "./images/PR_Bunnies.JPG",
+      alt: "Rolex",
+      title: "Rolex",
+      description: "Rolex Watch",
+      artist: "Valerie Brisendine",
+    },
+    {
+      id: 8,
+      imageSrc: "./images/PR_KamisakaSekka.JPG",
+      alt: "Person in snow",
+      title: "Kamisaka Sekka",
+      description: "A person walking through snow",
       pricingText: 120,
       artist: "Valerie Brisendine",
     },

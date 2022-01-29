@@ -51,7 +51,7 @@ function App() {
               <Route exact path="/success" component={Success} />
               <Route exact path="/contactForm" component={ContactForm} />
               <Route exact path="/orderHistory" component={OrderHistory} />
-              <Route exact path="/products/:id" component={Detail} />
+              <Route exact path="/artworks/:id" component={Detail} />
             </Switch>
           </StoreProvider>
         </div>

@@ -1,12 +1,12 @@
 import React, { createContext, useContext } from "react";
-import { useProductReducer } from './reducers'
+import { useArtworkReducer } from './reducers'
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
 
 const StoreProvider = ({ value = [], ...props }) => {
-  const [state, dispatch] = useProductReducer({
-    products: [],
+  const [state, dispatch] = useArtworkReducer({
+    artworks: [],
     cart: [],
     cartOpen: false,
     categories: [],

@@ -10,6 +10,8 @@
   padding: .5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
   border-bottom-left-radius: .5rem;
+  color: var(--dark);
+  
  
 }
 
@@ -55,7 +57,7 @@
 .cart input {
   width: 50px;
   padding: 0;
-  margin: 0 .5rem 1rem 0;
+  margin: 0 .5rem 1rem 1rem;
 }
 
 @media screen and (max-width: 768px) {
